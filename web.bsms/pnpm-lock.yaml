@@ -23,6 +23,9 @@ importers:
       '@fontsource-variable/geist':
         specifier: ^5.3.0
         version: 5.3.0
+      '@netlify/vite-plugin-react-router':
+        specifier: ^4.0.0
+        version: 4.0.0(react-router@8.4.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(vite@8.3.1(@types/node@22.20.4)(jiti@2.7.0))
       '@react-router/node':
         specifier: ^8.4.0
         version: 8.4.0(react-router@8.4.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(typescript@5.9.3)
@@ -399,6 +402,25 @@ packages:
       '@cfworker/json-schema':
         optional: true
 
+  '@netlify/edge-functions@3.0.8':
+    resolution: {integrity: sha512-ml1oCDsRTTRmZS2nUj8XRD1b6+foEiZT3lPk7qQ4nv/jnxylHJ20ooPzPDH+cJmGjXFrMeR14/91W1o6D2ftBg==}
+    engines: {node: '>=18.0.0'}
+
+  '@netlify/functions@5.3.0':
+    resolution: {integrity: sha512-FP+xCoZMkMOUsKa4UdG/oiK/2md1/TxuXvqqieaMVMgDbFFMaHI8h0oHCViUY73kPbKV6HyzayaSXGYXKpBSoQ==}
+    engines: {node: '>=18.0.0'}
+
+  '@netlify/types@2.8.0':
+    resolution: {integrity: sha512-8/g0Pt6y6wXj5Ia5eeYLiXhRfWeqZXGXpGFeCiiQdUOem+FPtXdA4+YdGxqzWc7D0AvptKSO01KGeeVWHSu8Kg==}
+    engines: {node: ^18.14.0 || >=20}
+
+  '@netlify/vite-plugin-react-router@4.0.0':
+    resolution: {integrity: sha512-lwmeOwVm35yyM4w7piWPt+LAHnwt3IhpZfQ3MJGyFBk2kxh7ILBnFMMesoWc1hdj2owdsq0qhnX1wkpcrEjX3g==}
+    engines: {node: '>=22.22.0'}
+    peerDependencies:
+      react-router: '>=7.9.0'
+      vite: '>=6.0.0'
+
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
     engines: {node: '>= 8'}
@@ -468,6 +490,9 @@ packages:
     hasBin: true
     peerDependencies:
       react-router: 8.4.0
+
+  '@remix-run/node-fetch-server@0.13.3':
+    resolution: {integrity: sha512-UfjOXed/DQteaM5VyTfqTeGpHwyL2J5aoRGY6cydip4tt1ehNNeSwuXCC7AEGE0RWBs/7bgKxYkL/B/+UDe4AA==}
 
   '@remix-run/node-fetch-server@0.14.1':
     resolution: {integrity: sha512-pKenF5ysIN5lDCnCyvoUxDhKP0tfnGagvGbZh01xxHG6DJXSIXWVC9NpLSDGjxcxd1CKdCOKuZFleXBF3pChIg==}
@@ -2793,6 +2818,26 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@netlify/edge-functions@3.0.8':
+    dependencies:
+      '@netlify/types': 2.8.0
+
+  '@netlify/functions@5.3.0':
+    dependencies:
+      '@netlify/types': 2.8.0
+
+  '@netlify/types@2.8.0': {}
+
+  '@netlify/vite-plugin-react-router@4.0.0(react-router@8.4.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(vite@8.3.1(@types/node@22.20.4)(jiti@2.7.0))':
+    dependencies:
+      '@netlify/edge-functions': 3.0.8
+      '@netlify/functions': 5.3.0
+      '@remix-run/node-fetch-server': 0.13.3
+      isbot: 5.2.2
+      react-router: 8.4.0(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      tinyglobby: 0.2.17
+      vite: 8.3.1(@types/node@22.20.4)(jiti@2.7.0)
+
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
       '@nodelib/fs.stat': 2.0.5
@@ -2871,6 +2916,8 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
       - typescript
+
+  '@remix-run/node-fetch-server@0.13.3': {}
 
   '@remix-run/node-fetch-server@0.14.1': {}
 
