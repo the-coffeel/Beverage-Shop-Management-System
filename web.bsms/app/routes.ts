@@ -5,10 +5,20 @@ export default [
     route('dashboard', 'modules/dashboard.tsx'),
     route('for-you', 'modules/for-you.tsx'),
     route('inbox', 'modules/inbox.tsx'),
+    route('finance', 'modules/finance/page.tsx'),
+    route('sales', 'modules/sales/page.tsx'),
+    route('purchasing', 'modules/purchasing/page.tsx'),
+    route('reports', 'modules/reports/page.tsx'),
 
     route('products', 'modules/products-managements/products/products.tsx'),
-    route('products/create', 'modules/products-managements/products/product-create.tsx'),
-    route('products/categories', 'modules/products-managements/category/categories.tsx'),
+    route(
+        'products/create',
+        'modules/products-managements/products/product-create.tsx',
+    ),
+    route(
+        'products/categories',
+        'modules/products-managements/category/categories.tsx',
+    ),
     route('products/brands', 'modules/products-managements/brand/brands.tsx'),
 
     route('people/customers', 'modules/people/Customers/customers.tsx'),

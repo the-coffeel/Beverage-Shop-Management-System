@@ -1,13 +1,16 @@
-import type { Route } from "./+types/home";
-import { Welcome } from "./welcome/welcome";
+import type { Route } from './+types/home';
+import DashboardPage from './dashboard';
 
 export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "MyTeam - Welcome" },
-    { name: "description", content: "Welcome to MyTeam atom ERP!" },
-  ];
+    return [
+        { title: 'Dashboard | BSMS' },
+        {
+            name: 'description',
+            content: 'Beverage shop sales, purchasing, and stock overview.',
+        },
+    ];
 }
 
 export default function Home() {
-  return <Welcome />;
+    return <DashboardPage />;
 }
